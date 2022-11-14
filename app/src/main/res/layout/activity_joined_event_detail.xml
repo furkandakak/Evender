@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    tools:context=".pages.JoinedEventDetail">
+
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/icons_writing"
+        app:layout_constraintStart_toEndOf="@+id/text_join"
+        app:layout_constraintTop_toTopOf="@+id/text_join"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/button_join"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/favorite_heart"
+        android:onClick="add_to_fav"
+        app:layout_constraintEnd_toEndOf="@+id/date_text"
+        app:layout_constraintTop_toTopOf="@+id/button"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/button_favori"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/event_cancel"
+        android:onClick="remove_from_join"
+        app:layout_constraintStart_toStartOf="@+id/favorite_design"
+        app:layout_constraintTop_toBottomOf="@+id/favorite_design"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/complaint"
+        android:onClick="complaint_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button_favori"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/favorite_design"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/favorite_heart"
+        app:layout_constraintStart_toStartOf="@+id/text_detail_detail"
+        app:layout_constraintTop_toBottomOf="@+id/text_detail_detail"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/join_design"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/ic_baseline_person_24"
+        app:layout_constraintStart_toEndOf="@+id/text_fav"
+        app:layout_constraintTop_toTopOf="@+id/text_fav"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/text_join"
+        android:layout_width="32dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/join_design"
+        app:layout_constraintTop_toTopOf="@+id/join_design" />
+
+    <TextView
+        android:id="@+id/text_detail_country"
+        android:layout_width="120dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:text="Ülke"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_detail_detail"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="10dp"
+        android:scrollbarThumbVertical="@android:color/black"
+        android:scrollbars="vertical"
+        android:text="detaylar"
+        android:textColor="@color/black"
+        android:textColorHint="#000000"
+        android:verticalScrollbarPosition="defaultPosition"
+        app:layout_constraintEnd_toEndOf="@+id/text_detail_header"
+        app:layout_constraintStart_toStartOf="@+id/text_detail_header"
+        app:layout_constraintTop_toBottomOf="@+id/text_detail_header" />
+
+    <TextView
+        android:id="@+id/text_detail_nick"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="7dp"
+        android:text="düzenleyen"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/date_text"
+        app:layout_constraintStart_toEndOf="@+id/button5"
+        app:layout_constraintTop_toTopOf="@+id/button5" />
+
+    <TextView
+        android:id="@+id/text_detail_header"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:scrollbarThumbVertical="@android:color/black"
+        android:scrollbars="vertical"
+        android:text="başlık"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/text_detail_category"
+        app:layout_constraintStart_toStartOf="@+id/text_detail_country"
+        app:layout_constraintTop_toBottomOf="@+id/text_detail_country" />
+
+    <TextView
+        android:id="@+id/text_detail_category"
+        android:layout_width="120dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:text="kategori"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_detail_city"
+        android:layout_width="120dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="5dp"
+        android:text="şehir"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/text_detail_category"
+        app:layout_constraintStart_toEndOf="@+id/text_detail_country"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Etkinlik Sohbeti"
+        android:textColor="@color/black"
+        android:textStyle="normal|bold"
+        app:layout_constraintEnd_toEndOf="@+id/button_join"
+        app:layout_constraintStart_toStartOf="@+id/button_favori"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <TextView
+        android:id="@+id/textView_click_chat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="5dp"
+        android:onClick="click_for_message"
+        android:text="Mesaj Göndermek İçin Tıklayın:"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="normal|bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="remove_from_join"
+        android:text="Katıldıklarımdan \nÇıkar"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/button_favori"
+        app:layout_constraintTop_toBottomOf="@+id/button_favori"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="add_to_fav"
+        android:text="Favoriye Ekle"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/button_join"
+        app:layout_constraintTop_toBottomOf="@+id/button_join"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="complaint_button"
+        android:text="Şikayet Et"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintStart_toStartOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/text_fav"
+        android:layout_width="42dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/favorite_design"
+        app:layout_constraintTop_toTopOf="@+id/favorite_design" />
+
+    <TextView
+        android:id="@+id/date_text"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:text="tarih"
+        android:textAlignment="textEnd"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/text_detail_detail"
+        app:layout_constraintTop_toTopOf="@+id/text_detail_nick" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rec_main_detail"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView_click_chat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

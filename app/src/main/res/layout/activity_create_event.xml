@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarThumbVertical="@color/cardview_dark_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/button_create_event"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/add_create_page"
+                android:onClick="button_create_event"
+                app:layout_constraintEnd_toEndOf="@+id/date_view"
+                app:layout_constraintStart_toStartOf="@+id/date_view"
+                app:layout_constraintTop_toBottomOf="@+id/date_view"
+                tools:ignore="TextContrastCheck,SpeakableTextPresentCheck" />
+
+            <Button
+                android:id="@+id/button_create_to_home"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/home_new"
+                android:onClick="button_create_to_home"
+                app:layout_constraintBottom_toBottomOf="@+id/toolbar4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/header_text"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="5dp"
+                android:background="@color/white"
+                android:ems="10"
+                android:hint="Başlık Girin:"
+                android:inputType="textPersonName"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/spinner_category_create"
+                app:layout_constraintStart_toStartOf="@+id/spinner_category_create"
+                app:layout_constraintTop_toBottomOf="@+id/spinner_category_create"
+                tools:ignore="TextContrastCheck" />
+
+            <EditText
+                android:id="@+id/detail_create_text"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="5dp"
+                android:background="@color/white"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Etkinlik Hakkında Detaylı Açıklama Girin:"
+                android:inputType="textMultiLine"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/header_text"
+                app:layout_constraintTop_toBottomOf="@+id/header_text"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <Spinner
+                android:id="@+id/spinner_country_create"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/black"
+                android:backgroundTintMode="src_atop"
+                android:popupBackground="@color/white"
+                android:spinnerMode="dialog"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar4"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            <Spinner
+                android:id="@+id/spinner_city_create"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:backgroundTint="@color/black"
+                android:backgroundTintMode="src_atop"
+                android:spinnerMode="dialog"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar4"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <Spinner
+                android:id="@+id/spinner_category_create"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/black"
+                android:backgroundTintMode="src_atop"
+                android:spinnerMode="dialog"
+                app:layout_constraintEnd_toEndOf="@+id/spinner_city_create"
+                app:layout_constraintStart_toStartOf="@+id/spinner_country_create"
+                app:layout_constraintTop_toBottomOf="@+id/spinner_country_create"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/textView_category"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Kategori Seçiniz:"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/spinner_category_create"
+                app:layout_constraintStart_toStartOf="@+id/spinner_category_create"
+                app:layout_constraintTop_toTopOf="@+id/spinner_category_create" />
+
+            <TextView
+                android:id="@+id/textView_city"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Şehir Seçiniz:"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/spinner_city_create"
+                app:layout_constraintStart_toStartOf="@+id/spinner_city_create"
+                app:layout_constraintTop_toTopOf="@+id/spinner_city_create" />
+
+            <TextView
+                android:id="@+id/textView_country"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Ülke Seçiniz:"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/spinner_country_create"
+                app:layout_constraintStart_toStartOf="@+id/spinner_country_create"
+                app:layout_constraintTop_toTopOf="@+id/spinner_country_create" />
+
+            <TextView
+                android:id="@+id/textView_create_event"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="button_create_event"
+                android:text="Etkinlik Oluştur"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/button_create_event"
+                app:layout_constraintStart_toStartOf="@+id/button_create_event"
+                app:layout_constraintTop_toBottomOf="@+id/button_create_event"
+                tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Etkinlik Ne Zaman?"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="@+id/detail_create_text"
+                app:layout_constraintStart_toStartOf="@+id/detail_create_text"
+                app:layout_constraintTop_toBottomOf="@+id/detail_create_text" />
+
+            <TextView
+                android:id="@+id/date_view"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:text="Tarih Eklemek İçin Tıklayın:"
+                android:textAlignment="viewStart"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/textView20"
+                app:layout_constraintStart_toStartOf="@+id/textView20"
+                app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="#2c2d2f"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_create_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Etkinlik Oluştur"
+                android:textColor="#d2d3d5"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/toolbar4"
+                app:layout_constraintEnd_toEndOf="@+id/toolbar4"
+                app:layout_constraintStart_toStartOf="@+id/toolbar4"
+                app:layout_constraintTop_toTopOf="@+id/toolbar4" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+

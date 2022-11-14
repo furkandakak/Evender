@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:touchscreenBlocksFocus="false"
+    tools:layout_editor_absoluteY="25dp">
+
+    <Button
+        android:id="@+id/button_main_filter"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/ic_baseline_filter_alt_24"
+        android:onClick="button_search_main"
+        android:textColor="#d2d3d5"
+        app:layout_constraintBottom_toTopOf="@+id/textView_filter"
+        app:layout_constraintEnd_toEndOf="@+id/textView_filter"
+        app:layout_constraintStart_toStartOf="@+id/textView_filter"
+        tools:ignore="TextContrastCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/home_page_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/home_new"
+        android:onClick="home_button_clicked"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
+        app:layout_constraintStart_toStartOf="@+id/toolbar2"
+        app:layout_constraintTop_toTopOf="@+id/toolbar2"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/create_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/create_new"
+        android:onClick="create_button_clicked"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar2"
+        app:layout_constraintStart_toStartOf="@+id/toolbar2"
+        app:layout_constraintTop_toTopOf="@+id/toolbar2"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/joined_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/joined_new"
+        android:onClick="joined_button_clicked"
+        app:layout_constraintEnd_toStartOf="@+id/create_button"
+        app:layout_constraintStart_toEndOf="@+id/home_page_button"
+        app:layout_constraintTop_toTopOf="@+id/home_page_button"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/favorite_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/favorite_new"
+        android:onClick="favorite_button_clicked"
+        app:layout_constraintEnd_toStartOf="@+id/account_button"
+        app:layout_constraintStart_toEndOf="@+id/create_button"
+        app:layout_constraintTop_toTopOf="@+id/account_button"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/account_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/account_new"
+        android:onClick="account_button_clicked"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar2"
+        app:layout_constraintTop_toTopOf="@+id/toolbar2"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/main_clean_button"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/ic_baseline_filter_alt_off_24"
+        android:onClick="clean_filter"
+        android:textColor="#d2d3d5"
+        app:layout_constraintBottom_toTopOf="@+id/textView_cleanFilter"
+        app:layout_constraintEnd_toEndOf="@+id/textView_cleanFilter"
+        app:layout_constraintStart_toStartOf="@+id/textView_cleanFilter"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/find_event"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/ic_baseline_search_24"
+        android:onClick="click_to_word"
+        android:textColor="#d2d3d5"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar3"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar3"
+        app:layout_constraintTop_toTopOf="@+id/toolbar3"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <Spinner
+        android:id="@+id/spinner_category"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/black"
+        android:backgroundTintMode="src_atop"
+        android:spinnerMode="dialog"
+        app:layout_constraintStart_toStartOf="@+id/spinner_country"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_country"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <Spinner
+        android:id="@+id/spinner_city"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:backgroundTint="@color/black"
+        android:backgroundTintMode="src_atop"
+        android:spinnerMode="dialog"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar3"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <Spinner
+        android:id="@+id/spinner_country"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/black"
+        android:backgroundTintMode="src_atop"
+        android:spinnerMode="dialog"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar3"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="button_search_main"
+        android:text="Filtrele"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/spinner_category"
+        app:layout_constraintStart_toStartOf="@+id/spinner_city"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/textView_cleanFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="clean_filter"
+        android:text="Temizle"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_filter"
+        app:layout_constraintEnd_toEndOf="@+id/spinner_city"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar3"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#1b1b1d"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#1b1b1d"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="@android:color/darker_gray"
+        app:layout_constraintBottom_toTopOf="@+id/toolbar2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_category" />
+
+    <EditText
+        android:id="@+id/edittext_find_word"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="15dp"
+        android:ems="10"
+        android:hint="Etkinlik Ara"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHint="#d2d3d5"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar3"
+        app:layout_constraintEnd_toStartOf="@+id/find_event"
+        app:layout_constraintStart_toStartOf="@id/toolbar3"
+        app:layout_constraintTop_toTopOf="@+id/toolbar3"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/textView_country_main"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Ülke Seçiniz:"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/spinner_country"
+        app:layout_constraintEnd_toEndOf="@+id/spinner_country"
+        app:layout_constraintStart_toStartOf="@+id/spinner_country"
+        app:layout_constraintTop_toTopOf="@+id/spinner_country" />
+
+    <TextView
+        android:id="@+id/textView_city_main"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Şehir Seçiniz:"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/spinner_city"
+        app:layout_constraintEnd_toEndOf="@+id/spinner_city"
+        app:layout_constraintStart_toStartOf="@+id/spinner_city"
+        app:layout_constraintTop_toTopOf="@+id/spinner_city" />
+
+    <TextView
+        android:id="@+id/textView_category_main"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Kategori Seçiniz:"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/spinner_category"
+        app:layout_constraintEnd_toEndOf="@+id/spinner_category"
+        app:layout_constraintStart_toStartOf="@+id/spinner_category"
+        app:layout_constraintTop_toTopOf="@+id/spinner_category" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

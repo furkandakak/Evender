@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.furkandakak.together">
+
+    <application
+
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/evender_icon_round"
+        android:label="Evender"
+        android:roundIcon="@mipmap/evender_icon_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.NoActionBar"
+        tools:targetApi="31">
+        <activity
+            android:name=".pages.JoinedEventDetail"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".pages.FavoriteEventDetail"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".MainPageDetail"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".pages.UserAgreement"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".pages.LoginPage"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".pages.Account"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".pages.FavoriteEvent"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".pages.JoinedEvent"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".pages.CreateEvent"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".pages.MainPage"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".pages.LoginPage"
+            android:exported="true"
+            tools:ignore="DuplicateActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

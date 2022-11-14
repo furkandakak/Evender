@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Together</string>
+
+    <string-array name="countries">
+        <item>(Ülke Seç)</item>
+        <item>TÜRKİYE</item>
+    </string-array>
+
+
+</resources>
